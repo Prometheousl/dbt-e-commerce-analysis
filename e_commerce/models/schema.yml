@@ -1,0 +1,63 @@
+version: 2
+
+models:
+  - name: stg_thelook_distribution_centers
+    columns:
+      - name: distribution_center_id
+        tests:
+          - unique
+          - not_null
+      - name: latitude
+        tests:
+          - valid_latitude
+      - name: longitude
+        tests:
+          - valid_longitude
+
+  - name: stg_thelook_events
+    columns:
+      - name: event_id
+        tests:
+          - unique
+          - not_null
+
+  - name: stg_thelook_inventory_items
+    columns:
+      - name: inventory_item_id
+        tests:
+          - unique
+          - not_null
+
+  - name: stg_thelook_order_items
+    columns:
+      - name: order_item_id
+        tests:
+          - unique
+          - not_null
+
+  - name: stg_thelook_orders
+    columns:
+      - name: order_id
+        tests:
+          - unique
+          - not_null
+
+  - name: stg_thelook_products
+    columns:
+      - name: product_id
+        tests:
+          - unique
+          - not_null
+          
+  - name: stg_thelook_users
+    columns:
+      - name: user_id
+        tests:
+          - unique
+          - not_null
+      - name: latitude
+        tests:
+          - valid_latitude
+      - name: longitude
+        tests:
+          - valid_longitude
